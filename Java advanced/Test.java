@@ -2,6 +2,7 @@
 import java.util.HashMap;
 
 import java.util.Map;
+import java.util.Optional;
 
 class students<k, v> {
     private Map<k, v> studentsData = new HashMap<>();
@@ -25,5 +26,9 @@ public class Test {
         StudentMarks.set("Sohini", 98);
         System.out.println(StudentMarks.get("Subhajit"));
         System.out.println(StudentMarks.get("Sohini"));
+
+        Optional<Integer> marksOfRohit = Optional.ofNullable(StudentMarks.get("rohit"));
+        System.out.println(marksOfRohit);
     }
+
 }
